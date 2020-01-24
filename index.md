@@ -8,4 +8,6 @@
 
 - 高并发
   - [限流算法](高并发/限流算法.md)
+- 多线程
+  - [线程间通信 Object/wait(),notify() 和 Lock/Condition/await(),signal()](多线程/wait.md)
 
