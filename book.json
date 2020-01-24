@@ -1,0 +1,48 @@
+{
+    "title": "笔记",
+    "author": "听听那冷雨",
+    "description": "笔记",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "plugins": [
+        "sharing",
+        "splitter",
+        "expandable-chapters-small",
+        "anchors",
+
+        "-github",
+        "-github-buttons",
+        "-donate",
+        "sharing-plus",
+        "anchor-navigation-ex",
+        "favicon"
+    ],
+    "pluginsConfig": {
+        "sharing": {
+            "douban": false,
+            "facebook": false,
+            "google": false,
+            "hatenaBookmark": false,
+            "instapaper": false,
+            "line": false,
+            "linkedin": false,
+            "messenger": false,
+            "pocket": false,
+            "qq": false,
+            "qzone": false,
+            "stumbleupon": false,
+            "twitter": false,
+            "viber": false,
+            "vk": false,
+            "weibo": false,
+            "whatsapp": false,
+            "all": [
+                "google", "facebook", "weibo", "twitter",
+                "qq", "qzone", "linkedin", "pocket"
+            ]
+        },
+        "anchor-navigation-ex": {
+            "showLevel": false
+        }
+    }
+}
