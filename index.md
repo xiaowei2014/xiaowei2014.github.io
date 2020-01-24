@@ -7,3 +7,6 @@
   * [explain执行计划](mysql/explain.md)
 * [java](java/README.md)
 
+- 高并发
+  - [限流算法](高并发/限流算法.md)
+
