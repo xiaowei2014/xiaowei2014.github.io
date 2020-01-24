@@ -1,4 +1,6 @@
-# [synchronized锁升级的过程](https://www.cnblogs.com/myseries/p/12213997.html)
+# synchronized锁升级过程]
+
+https://www.cnblogs.com/myseries/p/12213997.html
 
 接触过线程安全的同学想必都使用过synchronized这个关键字，在java同步代码快中，synchronized的使用方式无非有两个:
 
