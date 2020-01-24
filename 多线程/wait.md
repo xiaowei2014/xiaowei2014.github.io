@@ -74,8 +74,6 @@ public class TestWaitAndnotify {
 
 **一：Lock/condition/await(), signal(), signalAll()**
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
 ```
 import java.util.LinkedList;
 import java.util.Queue;
