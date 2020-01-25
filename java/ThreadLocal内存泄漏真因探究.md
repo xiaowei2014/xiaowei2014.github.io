@@ -1,5 +1,7 @@
 # ThreadLocal内存泄漏真因探究
 
+https://www.cnblogs.com/myseries/p/12081507.html
+
 ### ThreadLocal原理回顾
 
 ![img](ThreadLocal内存泄漏真因探究.jpg)
