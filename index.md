@@ -15,5 +15,6 @@
 - JVM
   - [JVM内存区域](JVM/JVM内存区域.md)
   - [Metaspace](JVM/metaspace.md)
+  - [JVM 堆内存溢出后，其他线程是否可继续工作？](JVM/OOM not exit.md)
 - NIO
 
