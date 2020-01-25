@@ -8,7 +8,7 @@ Java 虚拟机所管理的内存一共分为Method Area（方法区）、VM Stac
 
 这些区域都有各自的用途，以及创建和销毁的时间，有的区域随着虚拟机进程的启动而存在，有些区域则是依赖用户线程的启动和结束而建立和销毁。具体如下图所示：
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YrLz7nDONjFuIicD4aHMlG0JaDDuEM3Ff48tsTwslQPcwFXQ91hhlEFufVp5bnzTX4j4a5PLdTDfNuBiaKliahs1g/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![img](https://img2018.cnblogs.com/blog/885859/201912/885859-20191223165047036-1684241233.png)
 
 上图介绍的是JDK1.8 JVM运行时内存数据区域划分。1.8同1.7比，最大的差别就是：**元数据区取代了永久代**。元空间的本质和永久代类似，都是对JVM规范中方法区的实现。不过元空间与永久代之间最大的区别在于：**元数据空间并不在虚拟机中，而是使用本地内存**。
 
@@ -30,7 +30,7 @@ Java 虚拟机所管理的内存一共分为Method Area（方法区）、VM Stac
 
 ### 2 Java虚拟机栈（Java Virtual Machine Stacks）
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/YrLz7nDONjFuIicD4aHMlG0JaDDuEM3FfwzdDicr8br6drOJBOL3O5mMayoCfEOg6SGPIKkDFKrkQrtOtZp8J6lg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![img](https://img2018.cnblogs.com/blog/885859/201912/885859-20191223165102722-307876932.png)
 
 **Java虚拟机栈（Java Virtual Machine Stacks）**描述的是**Java方法执行的内存模型**：每个方法在执行的同时都会创建一个**栈帧（Stack Frame）**，从上图中可以看出，栈帧中存储着**局部变量表**、**操作数栈**、**动态链接**、**方法出口**等信息。每一个方法从调用直至执行完成的过程，会对应一个栈帧在虚拟机栈中入栈到出栈的过程。
 
@@ -67,7 +67,9 @@ Java虚拟机规范中对这个区域规定了两种异常状况：
 
 Java堆是垃圾收集器管理的主要区域，因此也被称为 **“GC堆（Garbage Collected Heap）”** 。从内存回收的角度看内存空间可如下划分：
 
-![图片摘自https://blog.csdn.net/bruce128/article/details/79357870](https://mmbiz.qpic.cn/mmbiz_png/YrLz7nDONjFuIicD4aHMlG0JaDDuEM3FfLickRD3bJx9wgYduxfHsvK060GkJH3iavSDCaelF3chGzRyg1TQ0OGKg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)图片摘自https://blog.csdn.net/bruce128/article/details/79357870
+![img](https://img2018.cnblogs.com/blog/885859/201912/885859-20191223165217624-1601599412.png)
+
+图片摘自https://blog.csdn.net/bruce128/article/details/79357870
 
 - **新生代（Young）**：新生成的对象优先存放在新生代中，新生代对象朝生夕死，存活率很低。在新生代中，常规应用进行一次垃圾收集一般可以回收70% ~ 95% 的空间，回收效率很高。
 
