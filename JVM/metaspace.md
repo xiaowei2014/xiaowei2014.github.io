@@ -8,7 +8,7 @@ java heap：字面量(interned strings)；类的静态变量(class statics)。
 
 我们可以通过一段程序来比较 JDK 1.6 与 JDK 1.7及 JDK 1.8 的区别，以字符串常量为例：
 
-![image-20200125112008285](C:\Users\zhangxiaowei\AppData\Roaming\Typora\typora-user-images\image-20200125112008285.png)
+![image-20200125112008285](metaspace1.png)
 
 JDK 1.6 的运行结果：
 
@@ -33,7 +33,7 @@ JDK 1.8的运行结果：
 　　-XX:MinMetaspaceFreeRatio，在GC之后，最小的Metaspace剩余空间容量的百分比，减少为分配空间所导致的垃圾收集
 　　-XX:MaxMetaspaceFreeRatio，在GC之后，最大的Metaspace剩余空间容量的百分比，减少为释放空间所导致的垃圾收集
 
-![image-20200125112359032](C:\Users\zhangxiaowei\AppData\Roaming\Typora\typora-user-images\image-20200125112359032.png)
+![image-20200125112359032](metaspace2.png)
 
 现在我们在 JDK 8下重新运行一下代码段 4，不过这次不再指定 PermSize 和 MaxPermSize。而是指定 MetaSpaceSize 和 MaxMetaSpaceSize的大小。输出结果如下：
 
