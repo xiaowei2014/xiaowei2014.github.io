@@ -23,7 +23,7 @@ explain select * from tbl_dept;
 
 - 1执行结果如下:
 
-*![这里写图片描述](https://img-blog.csdn.net/20180521155012377?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3poMTU3MzI2MjE2Nzk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)*
+*![这里写图片描述](explain1.png)*
 
 **EXPLAIN结果参数含义**
 
@@ -31,15 +31,15 @@ explain select * from tbl_dept;
 
 - id相同,执行顺序由上至下
 
-![img](https://img2018.cnblogs.com/blog/885859/201904/885859-20190419152720756-229903142.png)
+![img](explain2.png)
 
 - id不同,如果是子查询,id的序号会递增,id值越大,优先级越高,越先被执行
 
-![img](https://img2018.cnblogs.com/blog/885859/201904/885859-20190419152812436-124187623.png)
+![img](explain3.png)
 
 - id相同和不同,同时存在,遵从优先级高的优先执行,优先级相同的按照由上至下的顺序执行
 
-![img](https://img2018.cnblogs.com/blog/885859/201904/885859-20190419152835637-1233280197.png)
+![img](explain4.png)
 
 **2.select_type**
 　　查询的类型,主要用于区别普通查询,联合查询,子查询等复杂查询
@@ -59,7 +59,7 @@ explain select * from tbl_dept;
 - **system**:表只有一行记录,这是const类型的特例,平时不会出现
 - **const**:表示通过索引一次就找到了,const即常量,它用于比较primary key或unique索引,因为只匹配一行数据,所以效率很快,如将主键置于where条件中,mysql就能将该查询转换为一个常量 
 
-![img](https://img2018.cnblogs.com/blog/885859/201904/885859-20190419153049676-1370075656.png)
+![img](explain5.png)
 
 - **eq_ref**:唯一性索引扫描,对于每个索引键,表中只有一条记录与之匹配,常见于主键或唯一索引扫描
 - **ref**:非唯一性索引扫描,返回匹配某个单独值的行,它可能会找到多个符合条件的行,所以他应该属于查找和扫描的混合体

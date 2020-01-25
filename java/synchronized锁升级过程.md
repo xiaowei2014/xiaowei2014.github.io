@@ -128,8 +128,8 @@ synchronized(lockObject){
 4. 将锁对象的对象头的MarkWord替换为指向锁记录的指针。
 
 对应的图描述如下(图来自周志明深入java虚拟机)
-![图片1](https://user-gold-cdn.xitu.io/2018/8/22/165614893a59be34?w=721&h=344&f=png&s=42033)
-![图片2](https://user-gold-cdn.xitu.io/2018/8/22/165614960abf2f0e?w=549&h=343&f=png&s=35522)
+![图片1](synchronized锁升级过程1.jpg)
+![图片2](synchronized锁升级过程2.jpg)
 
 之后Markwork如下：
 

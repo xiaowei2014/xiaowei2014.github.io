@@ -64,7 +64,7 @@ public class TestWaitAndnotify {
 }
 ```
 
-![img](https://img2018.cnblogs.com/blog/885859/201912/885859-20191227093853611-1024696486.png)
+![img](wait1.png)
 
  
 
@@ -174,4 +174,4 @@ public class ProducerAndConsumer1 {
 }
 ```
 
-![img](https://img2018.cnblogs.com/blog/885859/201912/885859-20191226180509642-574603645.png)
+![img](wait2.png)

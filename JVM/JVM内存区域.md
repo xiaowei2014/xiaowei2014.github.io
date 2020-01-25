@@ -30,7 +30,7 @@ Java 虚拟机所管理的内存一共分为Method Area（方法区）、VM Stac
 
 ### 2 Java虚拟机栈（Java Virtual Machine Stacks）
 
-![img](https://img2018.cnblogs.com/blog/885859/201912/885859-20191223165102722-307876932.png)
+![img](JVM内存区域2.png)
 
 **Java虚拟机栈（Java Virtual Machine Stacks）**描述的是**Java方法执行的内存模型**：每个方法在执行的同时都会创建一个**栈帧（Stack Frame）**，从上图中可以看出，栈帧中存储着**局部变量表**、**操作数栈**、**动态链接**、**方法出口**等信息。每一个方法从调用直至执行完成的过程，会对应一个栈帧在虚拟机栈中入栈到出栈的过程。
 
@@ -67,7 +67,7 @@ Java虚拟机规范中对这个区域规定了两种异常状况：
 
 Java堆是垃圾收集器管理的主要区域，因此也被称为 **“GC堆（Garbage Collected Heap）”** 。从内存回收的角度看内存空间可如下划分：
 
-![img](https://img2018.cnblogs.com/blog/885859/201912/885859-20191223165217624-1601599412.png)
+![img](JVM内存区域3.png)
 
 图片摘自https://blog.csdn.net/bruce128/article/details/79357870
 
