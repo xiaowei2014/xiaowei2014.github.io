@@ -6,6 +6,7 @@
 * java
   * [synchronized锁升级过程](java/synchronized锁升级过程.md)
   * [ThreadLocal内存泄漏真因探究](java/ThreadLocal内存泄漏真因探究.md)
+  * [类加载器是如何加载 class 文件](java/类加载器是如何加载 class 文件.md)
 
 - 高并发
   - [限流算法](高并发/限流算法.md)
@@ -14,6 +15,7 @@
   - [线程开销](线程开销.md)
 - GC
   - [CMS配置模板](GC/CMS配置模板.md)
+  - [CMS/G1](GC/gc.md)
 - JVM
   - [JVM内存区域](JVM/JVM内存区域.md)
   - [Metaspace](JVM/metaspace.md)
