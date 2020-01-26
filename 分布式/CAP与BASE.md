@@ -26,7 +26,7 @@ CAP：Consistency Acailability Partition tolerance 的简写
 
 当网络分区出现后，为了保证一致性，就必须拒接请求，否则无法保证一致性
 
-![img](https://chenmingyu.top/distributed-transaction/CP.png)
+![img](CAP1.png)
 
 1. 当没有出网络分区时，系统A与系统B的数据一致，X=1
 2. 将系统A的X修改为2，X=2
@@ -43,7 +43,7 @@ CP架构保证了客户端在获取数据时一定是最近的写操作，或者
 
 当网络分区出现后，为了保证可用性，系统B可以返回旧值，保证系统的可用性
 
-![img](https://chenmingyu.top/distributed-transaction/AP.png)
+![img](CAP2.png)
 
 1. 当没有出网络分区时，系统A与系统B的数据一致，X=1
 2. 将系统A的X修改为2，X=2
