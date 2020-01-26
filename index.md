@@ -22,5 +22,5 @@
   - [NIO](NIO/NIO.md)
   - [Proactor与Reactor](NIO/Proactor与Reactor.md)
 - 分布式
-  - [CAP与BASE](CAP与BASE.md)
+  - [CAP与BASE](分布式/CAP与BASE.md)
 
