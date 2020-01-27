@@ -12,7 +12,8 @@
   - [限流算法](高并发/限流算法.md)
 - 多线程
   - [线程间通信 Object/wait(),notify() 和 Lock/Condition/await(),signal()](多线程/wait.md)
-  - [线程开销](线程开销.md)
+  - [线程开销](多线程/线程开销.md)
+  - [线程状态](多线程/线程状态.md)
 - GC
   - [CMS配置模板](GC/CMS配置模板.md)
   - [CMS/G1](GC/gc.md)
