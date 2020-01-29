@@ -40,6 +40,10 @@
   - [对外接口](安全/对外接口.md)
 - 网络
   - [4层模型简介](网络/4层模型简介.md)
+  - [https](网络/https.md)
 - GIT
   - [简介](GIT/简介.md)
+- 运维
+  - [linux命令](运维/linux命令.md)
+  - [java](运维/java.md)
 
