@@ -8,6 +8,8 @@
   * [ThreadLocal内存泄漏真因探究](java/ThreadLocal内存泄漏真因探究.md)
   * [类加载器是如何加载 class 文件](java/类加载器是如何加载 class 文件.md)
   * [编码细节](java/编码细节.md)
+  * [对象的创建](java/对象的创建.md)
+  * [String#intern](java/intern.md)
 
 - 高并发
   - [限流算法](高并发/限流算法.md)
