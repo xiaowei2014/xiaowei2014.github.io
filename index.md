@@ -3,6 +3,8 @@
 * [gitbook安装](gitbook/install.md)
 * mysql
   * [explain执行计划](mysql/explain.md)
+  * [MySQL版本特性.md](mysql/MySQL版本特性.md)
+  * [online-schema-change](mysql/online-schema-change.md)
 * java
   * [synchronized锁升级过程](java/synchronized锁升级过程.md)
   * [ThreadLocal内存泄漏真因探究](java/ThreadLocal内存泄漏真因探究.md)
