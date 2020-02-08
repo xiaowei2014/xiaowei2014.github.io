@@ -1,10 +1,18 @@
 # NIO模型 网络编程
 
-**非阻塞IO模型**
+### 二、非阻塞I/O
+
+　　非阻塞IO很简单，通过fcntl（POSIX）或ioctl（Unix）设为非阻塞模式，
 
 ![img](NIO3.png)
 
 应用进程调用**recvfrom**系统调用，如果内核数据没有准备好，会直接返回一个EWOULDBLOCK错误，应用进程不会阻塞，但是需要应用进程不断的轮询调用**recvfrom**，直到内核数据准备就绪，之后等待数据从内核复制到用户空间（这段时间会阻塞，但是耗时极小），复制完成后返回
+
+### 三、I/O多路复用
+
+<img src="多路复用.png" alt="img" style="zoom:60%;" />
+
+多路复用是指使用一个线程来检查多个文件描述符（Socket）的就绪状态，传入多个文件描述符（FileDescription，简称FD），如果有一个文件描述符（FileDescription）就绪，则返回，否则阻塞直到超时。
 
 JDK中NIO使用多路复用的IO模型，通过把多个IO阻塞复用到一个select的阻塞上，实现系统在单线程中可以同时处理多个客户端请求，节省系统开销，在JDK1.4和1.5 update10版本之前，JDK的Selector基于select/poll模型实现，在JDK 1.5 update10以上的版本，底层使用epoll代替了select/poll
 
