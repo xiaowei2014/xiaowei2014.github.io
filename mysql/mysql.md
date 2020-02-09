@@ -1,0 +1,1 @@
+查询表信息 show table status like 'tablename'

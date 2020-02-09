@@ -9,3 +9,5 @@
 查看系统当前使用的fd:cat /proc/sys/fs/file-nr  
 
 每个进程允许最大fd:ulimit -n
+
+二进制dump成16禁止 hexdump -C -v 二进制文件＞mytest.txt

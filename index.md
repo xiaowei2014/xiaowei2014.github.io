@@ -5,6 +5,7 @@
   * [explain执行计划](mysql/explain.md)
   * [MySQL版本特性.md](mysql/MySQL版本特性.md)
   * [online-schema-change](mysql/online-schema-change.md)
+  * [InnoDB的行记录格式](mysql/InnoDB的行记录格式.md)
 * java
   * [synchronized锁升级过程](java/synchronized锁升级过程.md)
   * [ThreadLocal内存泄漏真因探究](java/ThreadLocal内存泄漏真因探究.md)
@@ -56,4 +57,5 @@
 - 运维
   - [linux命令](运维/linux命令.md)
   - [java](运维/java.md)
+  - [mysql](运维/mysql.md)
 
