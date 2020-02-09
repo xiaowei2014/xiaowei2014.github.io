@@ -31,10 +31,7 @@ show variables like 'innodb_file_format';
 
 Dynamic和Compact基本是类似的，但是它们在行溢出数据的处理上却完全不同：
 
-```InnoDB存储引擎和大多数数据库一样，记录是以行的形式存储的，这意味着页中保存着表中一行行的数据。另外MYSQL对每个页存放的记录数又有硬性的规定，最少2行，最多16KB/2 - 200，即7992行。在InnoDB 1.0.X之前，InnoDB存储引擎提供了Compact和Redundant两种格式来存放行记录数据。Redundant是mysql5.0版本之前的行记录存储方式，之后仍然支持这个格式是为了兼容之前版本的格式，5.1之后很少用到了，因为Compact的结构设计比它好得多，compact格式消耗的磁盘空间和备份耗时更小，Redundant相比之下大了一些。compact格式更适用于大多数的业务场景。在InnoDB 1.0.X版本开始又引入了新的文件格式(file format)，以前支持Compact和Redundant格式称为Antelope文件格式，新引入的文件格式称为Barracuda文件格式。Barracuda文件格式下拥有两种新的行记录格式：Compressed和Dynamic，同时，Barracuda文件格式也包括了Antelope所有的文件格式。这样Barracuda文件格式支持4种row_format：Redundant、Compact、Compressed、Dynamic而Antelope文件格式只支持2种row_format：Redundant、Compact参数innodb_file_format用来指定文件格式，可以通过下面的方式来查看当前所使用的InnoDB存储引擎的文件格式：show variables like &#39;innodb_file_format&#39;;现在基本上都是Barracuda。Dynamic和Compact基本是类似的，但是它们在行溢出数据的处理上却完全不同：compact格式下，溢出列存储前768字节，而dynamic格式下，溢出的列只存储前20字节，一旦发生了行溢出，dynamic其实就存储一个指针，数据都放在溢出页里，dynamic代表将长字段(发生行溢出)完全off-page存储。
-compact格式下，溢出列存储前768字节，而dynamic格式下，溢出的列只存储前20字节，一旦发生了行溢出，
-dynamic其实就存储一个指针，数据都放在溢出页里，dynamic代表将长字段(发生行溢出)完全off-page存储。
-```
+compact格式下，溢出列存储前768字节，而dynamic格式下，溢出的列只存储前20字节，一旦发生了行溢出，dynamic其实就存储一个指针，数据都放在溢出页里，dynamic代表将长字段(发生行溢出)完全off-page存储。
 
 ## 行记录格式
 
