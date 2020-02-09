@@ -2,6 +2,8 @@
 
 https://www.cnblogs.com/wade-luffy/p/6289183.html
 
+[TOC]
+
 InnoDB存储引擎和大多数数据库一样，记录是以行的形式存储的，这意味着页中保存着表中一行行的数据。另外MYSQL对每个页存放的记录数又有硬性的规定，最少2行，最多16KB/2 - 200，即7992行。
 
 
@@ -46,6 +48,8 @@ show table status like 'user'\G
 如果我们知道规则，可以读取其中的记录，如py_innodb_page_info工具。
 
 ### Redundant行记录格式(5.0前老版本)
+
+------
 
 Redundant是MySQL 5.0版本之前InnoDB的行记录存储方式，MySQL 5.0支持Redundant是为了向前兼容性。Redundant行记录以如下方式存储：
 
@@ -118,6 +122,8 @@ select * from mytest2\G
 当前表mytest2的字符集为Latin1，每个字符最多只占用1个字节。若这里将表mytest2的字符集转换为utf8，第三列char固定长度类型就不再是只占用10个字节了，而是10×3=30个字节，Redundant行格式下char固定字符类型将会占据可能存放的最大值字节数。
 
 ### Compact行记录格式(5.0引入)
+
+------
 
 Compact行记录是在MySQL 5.0时被引入的，其设计目标是能高效存放数据。简单来说，如果一个页中存放的行数据越多，其性能就越高。Compact行记录以如下方式进行存储： 
 
@@ -198,6 +204,8 @@ select * from mytest\G;
 第三行有NULL值，因此NULL标志位不再是00而是06了，转换成二进制为00000110，为1的值即代表了第2列和第3列的数据为NULL，在其后存储列数据的部分，我们会发现没有存储NULL，只存储了第1列和第4列非NULL的值。这个例子很好地说明了：不管是char还是varchar类型，NULL值是不占用存储空间的。
 
 ### Compressed与Dynamic行记录格式
+
+------
 
 新的两种格式对于存放BLOB的数据采用了完全的行溢出的方式，在数据页中只存放20个字节的指针，实际的数据都存放在BLOB Page中，而之前的Compact和Redundant两种格式会存放768个前缀字节。
 
