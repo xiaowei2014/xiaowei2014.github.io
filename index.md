@@ -58,4 +58,7 @@
   - [linux命令](运维/linux命令.md)
   - [java](运维/java.md)
   - [mysql](运维/mysql.md)
+- 架构
+  - mysql
+    - [TMySQL在线加字段](架构/mysql/TMySQL在线加字段.md)
 
