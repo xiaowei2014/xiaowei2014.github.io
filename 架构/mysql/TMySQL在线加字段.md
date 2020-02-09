@@ -23,7 +23,9 @@ compact聚集索引记录的格式由下图所示，由记录头和记录内容�
 ![mysqlops-innodb-three](tmysql2.png)
 
 Record Extra Bytes：是固定的5字节，表示记录的额外信息。
+
 Nullable Bitmap：记录可空位图，使用1个bit来表示一个可空字段是否为NULL。
+
 non-NULL Variable-Length Array：非空变长字段数组，表示非空变长字段（如varchar、varbinary）在该行的长度。
 
 关于Compact格式的详细介绍可以参考文章。
