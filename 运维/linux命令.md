@@ -11,3 +11,17 @@
 每个进程允许最大fd:ulimit -n
 
 二进制dump成16禁止 hexdump -C -v 二进制文件＞mytest.txt
+
+查看端口被哪个进程占用：lsof -i:端口号
+
+netstat -tunlp
+
+   -t：tcp
+
+   -u：udp
+
+   -n：拒绝显示别名
+
+   -l：仅列出有在listener的服务状态
+
+  -p：程序名

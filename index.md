@@ -6,6 +6,7 @@
   * [MySQL版本特性.md](mysql/MySQL版本特性.md)
   * [online-schema-change](mysql/online-schema-change.md)
   * [InnoDB的行记录格式](mysql/InnoDB的行记录格式.md)
+  * [集群搭建](集群搭建.md)
 * java
   * [synchronized锁升级过程](java/synchronized锁升级过程.md)
   * [ThreadLocal内存泄漏真因探究](java/ThreadLocal内存泄漏真因探究.md)
@@ -61,4 +62,12 @@
 - 架构
   - mysql
     - [TMySQL在线加字段](架构/mysql/TMySQL在线加字段.md)
+- UML
+  - [用例图UseCase](UML/用例图.md)
+  - [astah](UML/astah.md)
+  - [活动图](UML/活动图.md)
+- 设计模式
+  - [jdk里的设计模式](设计模式/jdk里的设计模式.md)
+  - 创建型模式
+    - [抽象工厂](抽象工厂.md)
 
